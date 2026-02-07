@@ -7,7 +7,7 @@ const OurWork = () => {
     {
       title: "Moblie app marketing",
       description:
-        "We turn bold ideas into power digital solutions that connect, engage, and inspire ...",
+        "We turn bold ideas into power digital solutions that connect, engage, and inspire.",
       image: assets.work_mobile_app,
     },
 
