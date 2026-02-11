@@ -7,6 +7,7 @@ import OurWork from "./components/OurWork";
 import Teams from "./components/Teams";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import { motion } from "motion/react";
 
 const App = () => {
   const [theme, setTheme] = useState(
@@ -65,7 +66,7 @@ const App = () => {
       <ContactUs />
       <Footer theme={theme} setTheme={setTheme} />
 
-      {/* Custom Cursor Ring  */}
+      {/* Custom Cursor Ring */}
       <div
         ref={outlineRef}
         className="fixed top-0 left-0 h-10 w-10 

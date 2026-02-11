@@ -1,11 +1,19 @@
 import React, { useState } from "react";
 import assets from "../assets/assets";
 import ThemeToggleBtn from "./ThemeToggleBtn";
+import { motion } from "motion/react";
 
 const Navbar = ({ theme, setTheme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0, y: -50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{
+        duration: 0.6,
+        ease: "easeOut",
+      }}
       className="flex justify-between items-center 
       px-4 sm:px-12 lg:px-24 xl:px-40 py-4 sticky
        top-0 z-20 backdrop-blur-xl
@@ -16,7 +24,6 @@ const Navbar = ({ theme, setTheme }) => {
         className="w-32 sm:w-40"
         alt=""
       />
-
       <div
         className={`text-gray-700 dark:text-white sm:text-sm
            ${!sidebarOpen ? "max-sm:w-0 overflow-hidden" : "max-sm:w-60 max-sm:pl-10"}  
@@ -70,7 +77,7 @@ const Navbar = ({ theme, setTheme }) => {
           />
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
